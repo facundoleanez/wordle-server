@@ -1,12 +1,13 @@
 const express = require("express");
 const router = express.Router();
 
-router.get("/", (req, res) => {
+router.get("/:id", (req, res) => {
+  const id = req.params.id;
   res.json({
     word: "house",
-    len: 5,
-    report: 0,
+    id: id,
   });
+  console.log(typeof id);
 });
 
 module.exports = router;
