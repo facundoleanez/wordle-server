@@ -8,4 +8,4 @@ const wordSchema = new Schema({
 });
 wordSchema.plugin(random);
 
-module.exports = model("WordLen4", wordSchema);
+module.exports = wordSchema;
