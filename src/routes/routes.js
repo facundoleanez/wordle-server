@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const mongoose = require("mongoose");
 const { model } = mongoose;
+const getVisitAndUpdate = require("../model/Visits.js");
 
 const WordLen4 = model("WordLen4", require("../model/Word.js"));
 const WordLen5 = model("WordLen5", require("../model/Word.js"));
@@ -71,5 +72,6 @@ router.get("/:id", (req, res) => {
       });
       break;
   }
+  getVisitAndUpdate();
 });
 module.exports = router;

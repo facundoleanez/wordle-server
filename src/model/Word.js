@@ -1,3 +1,4 @@
+require("../database.js");
 const mongoose = require("mongoose");
 const { Schema, model } = mongoose;
 const random = require("mongoose-simple-random");
